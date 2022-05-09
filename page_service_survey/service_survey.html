@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title>Service Survey</title>
+    <link href="../resource/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../resource/css/service_survey_custom.css" rel="stylesheet"> 
+    <script src="../resource/js/bootstrap.min.js"></script>
+    <script src="../resource/js/jquery.js"></script>
+    <script src="../resource/js/survey_custom.js"></script>
+</head>
+<body>
+    <div class="mt-4 container container-sm">
+        <div class="row text-center">
+            <h4 class="mt-5 mb-3">滿意度問卷 / Service Survey</h4>
+        </div>
+        <div class="m-2 row level border border-danger border-1 text-center mb-3">
+            <div class="fs-5">How was your experience at the clinic today</div>
+            <div class="fs-5 mb-3">您對本次就診滿意度是多少</div>
+            <div class="selectlevel d-flex justify-content-center mb-3">
+                <div class="circle-border">1</div>
+                <div class="circle-border">2</div>
+                <div class="circle-border">3</div>
+                <div class="circle-border">4</div>
+                <div class="circle-border">5</div>
+                <div class="circle-border">6</div>
+            </div>
+        </div>
+        <div class="downside-block row justify-content-center mt-4" hidden>
+            <div class="col-xs-4 downside text-center">Lack of professionalism</div>
+            <div class="col-xs-4 downside text-center">Inadequate teim with a doctor</div>
+            <div class="col-xs-4 downside text-center">Hygiene improvement</div>
+            <div class="col-xs-4 downside text-center">Location inconvenient</div>
+            <div class="col-xs-4 downside text-center">Waiting too long</div>
+            <div class="col-xs-4 downside free-text text-center text-danger">Free text</div>
+        </div>
+        <div class="row textbox m-2" hidden>
+            <div class="col-xs-12 text-danger text-start">Please share your thoughts with us</div>
+            <textarea class="col-xs-12 textbox-area form-control m-2 mr-3" placeholder="type here"></textarea>
+        </div>
+        <div class="row mt-4">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <button class="btn btn-danger btn-lg w-100">提交 / Submit</button>    
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</body>
+</html>

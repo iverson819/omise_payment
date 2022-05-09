@@ -1,0 +1,42 @@
+.level {
+    border-radius: 1rem;
+}
+
+.circle-border:hover, .circle {
+    width: 2rem;
+    height: 2rem;
+    background: no-repeat, red;
+    background-position: center, center;
+    padding-top: 0.15rem;
+    margin-right: 0.4rem;
+    border-radius: 50%
+}
+
+.circle-border {
+    width: 2rem;
+    height: 2rem;
+    padding-top: 0.15rem;
+    margin-right: 0.4rem;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+.downside {
+    width: 40%;
+    background: no-repeat, rgb(232, 218, 218);
+    background-position: center, center;
+    padding: 0.5rem;
+    margin-right: 20px;
+    margin-bottom: 0.4rem;
+    border-radius: 1rem;
+}
+
+.downside:hover, .downside-border {
+    border: 1px solid rgb(224, 104, 104);
+}
+
+.textbox-area {
+    height: 10rem;
+    border-radius: 1rem;
+    background-color: rgb(232, 218, 218);
+}

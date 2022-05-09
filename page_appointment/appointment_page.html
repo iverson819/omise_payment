@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>Appointment Page</title>
+    <link href="../resource/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="../resource/css/appointment_custom.css" rel="stylesheet"> 
+    <script src="../resource/js/bootstrap.min.js"></script>
+    <script src="../resource/js/jquery.js"></script>
+    <script src="../resource/js/appointment_custom.js"></script>
+</head>
+<body>
+    <div class="container container-sm">
+        <div class="row ">
+            <div class="col-12 m-3">
+                <h2>Appointment Booking / 預約系統</h2>
+            </div>
+            <form class="col-12 col-xs-12">
+                <div class="form-group m-2 step step1" next="step2">
+                  <label for="location">Choose Location / 選擇地點 *</label>
+                  <select class="form-control-lg w-100 custom-select" id="location">
+                    <option disabled selected>Demo clinic Orchard</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group m-2 step step2" hidden next="step3">
+                    <label for="location">Choose medical service / 選擇醫療服務 *</label>
+                    <select class="form-control-lg w-100 custom-select" id="location">
+                      <option disabled selected>Preferred service / 請選擇醫療服務</option>
+                      <option value="1">光療護膚</option>
+                      <option value="2">複合抽脂</option>
+                      <option value="3">皮秒雷射</option>
+                      <option value="4">波尿酸注射</option>
+                    </select>
+                </div>
+                <div class="form-group m-2 step step3" hidden next="step4">
+                    <label for="doctor">Choose provider / 選擇醫師 *</label>
+                    <select class="form-control-lg w-100 custom-select" id="doctor">
+                      <option disabled selected>Preferred service / 請選擇醫師</option>
+                      <option value="1">李聖潔醫師</option>
+                    </select>
+                </div>
+                <div class="form-group m-2 step step4" hidden next="step5">
+                  <label for="datetime">Choose date and time / 選擇日期與時間 *</label>
+                  <input type="date" class="form-control-lg w-100" id="datetime" placeholder="DD/MM/YYYY HH:MM">
+                </div>
+                <div class="form-group m-2 step step5" hidden next="step6">
+                    <label for="visited">Have you visited clinic before / 是否有來過診所看診 *</label>
+                    <select class="form-control-lg w-100 custom-select" id="visited">
+                      <option disabled selected>Select yes or no / 請回答是或否</option>
+                      <option value="true">yes</option>
+                      <option value="false">no</option>
+                    </select>
+                </div>
+                <div class="form-row m-2 step step6" hidden>
+                    <div class="form-group p-1">
+                        <label for="nationalid">Please key in your NRIC & DOB for us to verify your information / 請輸入National ID和DOB供系統驗證確認 *</label>
+                        <input type="text" class="form-control-lg w-100" id="nationalid" placeholder="Key in National ID">
+                    </div>
+                    <div class="form-group step p-1">
+                        <input type="date" class="form-control-lg w-100" id="dob" placeholder="Select your DOB">
+                    </div>
+                </div>
+                <div class="col-12 mt-5">
+                    <button type="button" class="btn btn-danger w-100 disabled submitBtn" data-bs-toggle="modal" data-bs-target="#sorryModal">確認</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal fade" id="sorryModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h5 class="modal-title">Sorry!</h5>
+                  <p>We are unable to verify your information with the system. Do you want to create a new profile with us?</p>
+                  <p class="mt-1">Kindly contact us at ~number~ if you have any question</p>
+                  <button type="button col-5 w-100" class="btn btn-danger" data-bs-dismiss="modal">Try Again</button>
+                  <button type="button col-5 w-100" class="btn btn-danger">YES</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.form-control-lg {
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 1rem;
+} 
+
+.custom-select {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+
+    background: url(../../images/red_arrow.jpg) no-repeat right white;
+    background-size: 2rem 2rem;
+}
+
+#sorryModal {
+    border-radius: 1rem;
+}
