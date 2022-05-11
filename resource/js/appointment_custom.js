@@ -13,10 +13,16 @@ var appointment = {
             let next = $(this).attr('next');
             $('.' + next).prop('hidden', false);
             
+            if($('.' + next).hasClass('finalstep')) {
+                console.log(val);
+                $('#email').prop('hidden', val === 'yes');
+            }
+
+            // time picker
             if($('.' + next).attr('datetimepicker')) {
                 flatpickr('#datetime', appointment.timeConfig);
             } else if($('.' + next).attr('datepicker')) {
-                flatpickr('#dob');
+                flatpickr('#dob', {disableMobile:true});
             }
         }
     }, 
@@ -40,6 +46,7 @@ var appointment = {
     timeConfig: {
         enableTime: true,
         dateFormat: "Y-m-d H:i",
+        disableMobile:true
     }
 
 }

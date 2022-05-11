@@ -3,7 +3,8 @@
     <title>Appointment Page</title>
     <link href="../resource/css/bootstrap.min.css" rel="stylesheet"> 
     <link href="../resource/css/flatpickr.css" rel="stylesheet">
-    <link href="../resource/css/appointment_custom.css" rel="stylesheet"> 
+    <link href="../resource/css/flatpickr_red.css" rel="stylesheet"> 
+    <link href="../resource/css/appointment_custom.css" rel="stylesheet">
     <script src="../resource/js/bootstrap.min.js"></script>
     <script src="../resource/js/jquery.js"></script>
     <script src="../resource/js/flatpickr.js"></script>
@@ -50,11 +51,11 @@
                     <label class="mb-2" for="visited">Have you visited clinic before / 是否有來過診所看診 *</label>
                     <select class="form-control-lg w-100 custom-select" id="visited">
                       <option disabled selected>Select yes or no / 請回答是或否</option>
-                      <option value="true">yes</option>
-                      <option value="false">no</option>
+                      <option>yes</option>
+                      <option>no</option>
                     </select>
                 </div>
-                <div datepicker="true" class="form-row mt-3 step step6" hidden>
+                <div datepicker="true" class="form-row mt-3 step step6 finalstep" hidden>
                     <div class="form-group p-1">
                         <label class="mb-2" for="nationalid">Please key in your NRIC & DOB for us to verify your information / 請輸入National ID和DOB供系統驗證確認 *</label>
                         <input type="text" class="form-control-lg w-100" id="nationalid" placeholder="Key in National ID">
@@ -62,6 +63,9 @@
                     <div class="form-group step p-1">
                         <input class="form-control-lg w-100" id="dob" placeholder="Select your DOB">
                     </div>
+                    <div class="form-group step p-1">
+                      <input class="form-control-lg w-100" id="email" placeholder="Email Address">
+                  </div>
                 </div>
                 <div class="col-12 mt-5">
                     <button type="button" class="btn btn-danger btn-lg w-100 disabled submitBtn" data-bs-toggle="modal" data-bs-target="#sorryModal">確認</button>
