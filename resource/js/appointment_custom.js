@@ -12,6 +12,12 @@ var appointment = {
         } else {
             let next = $(this).attr('next');
             $('.' + next).prop('hidden', false);
+            
+            if($('.' + next).attr('datetimepicker')) {
+                flatpickr('#datetime', appointment.timeConfig);
+            } else if($('.' + next).attr('datepicker')) {
+                flatpickr('#dob');
+            }
         }
     }, 
 
@@ -29,6 +35,11 @@ var appointment = {
         } else {
             $('.submitBtn').addClass('disabled');
         }
+    }, 
+
+    timeConfig: {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
     }
 
 }
