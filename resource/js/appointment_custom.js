@@ -14,8 +14,8 @@ var appointment = {
             $('.' + next).prop('hidden', false);
             
             if($('.' + next).hasClass('finalstep')) {
-                console.log(val);
                 $('#email').prop('hidden', val === 'yes');
+                $('#email').prop('disabled', val === 'yes');
             }
 
             // time picker
@@ -31,7 +31,8 @@ var appointment = {
         let result = true;
         $('.step').each((i,form) => {
             let val = $(form).find('.form-control-lg').val();
-            if(!val) {
+            let disabled = $(form).find('.form-control-lg').prop('disabled');
+            if(!val && !disabled) {
                 result = false;
             }
         });
