@@ -15,6 +15,7 @@
 
     background: url(../../images/red_arrow.jpg) no-repeat right white;
     background-size: 2rem 2rem;
+    background-position-x: 97%;
 }
 
 #sorryModal {
