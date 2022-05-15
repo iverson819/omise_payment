@@ -21,3 +21,13 @@
 #sorryModal {
     border-radius: 1rem;
 }
+
+.date-select {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+
+    background: url(../../images/red_calendar.png) no-repeat right white;
+    background-size: 2rem 2rem;
+    background-position-x: 97%;
+}
