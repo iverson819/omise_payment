@@ -1,0 +1,22 @@
+{
+  "name": "omise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lisooo790926/omise_payment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lisooo790926/omise_payment/issues"
+  },
+  "homepage": "https://github.com/Lisooo790926/omise_payment#readme",
+  "dependencies": {
+    "ion-datetime-picker": "^0.5.2"
+  }
+}

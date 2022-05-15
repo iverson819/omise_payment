@@ -8,6 +8,8 @@
     <link href="../resource/css/bootstrap.min.css" rel="stylesheet"> 
     <link href="../resource/css/flatpickr.css" rel="stylesheet">
     <link href="../resource/css/flatpickr_red.css" rel="stylesheet"> 
+    <link href="../resource/css/datetimepicker.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../resource/css/appointment_custom.css" rel="stylesheet">
     <script src="../resource/js/bootstrap.min.js"></script>
 </head>
@@ -71,7 +73,12 @@
                 <div class="col-12 mt-4">
                     <button type="button" class="btn btn-danger btn-lg w-100 disabled submitBtn" data-bs-toggle="modal" data-bs-target="#sorryModal">確認</button>
                 </div>
-            </form>
+                <div style="width: 250px; margin: 50px auto;">
+                  <div id="picker"></div>
+                  <input type="hidden" id="result" value="" />
+                </div>
+                 
+          </form>
         </div>
 
         <div class="modal fade" id="sorryModal" tabindex="-1">
@@ -92,6 +99,8 @@
 
     <script src="../resource/js/jquery.js"></script>
     <script src="../resource/js/flatpickr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js" integrity="sha512-LGXaggshOkD/at6PFNcp2V2unf9LzFq6LE+sChH7ceMTDP0g2kn6Vxwgg7wkPP7AAtX+lmPqPdxB47A0Nz0cMQ==" crossorigin="anonymous"></script>
+    <script src="../resource/js/datetimepicker.js"></script>
     <script src="../resource/js/appointment_custom.js"></script>
 
 </body>

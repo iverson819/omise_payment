@@ -53,3 +53,9 @@ var appointment = {
 }
 
 $(document).on('ready', appointment.init());
+$(document).ready( function () {
+    $('#picker').dateTimePicker({
+        dateFormat:"YYYY-MM-DD HH:mm", 
+        showTime:true
+    });
+})
