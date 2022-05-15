@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.98.0">
+
     <title>Appointment Page</title>
     <link href="../resource/css/bootstrap.min.css" rel="stylesheet"> 
     <link href="../resource/css/flatpickr.css" rel="stylesheet">
     <link href="../resource/css/flatpickr_red.css" rel="stylesheet"> 
     <link href="../resource/css/appointment_custom.css" rel="stylesheet">
     <script src="../resource/js/bootstrap.min.js"></script>
-    <script src="../resource/js/jquery.js"></script>
-    <script src="../resource/js/flatpickr.js"></script>
-    <script src="../resource/js/appointment_custom.js"></script>
 </head>
 <body>
-    <div class="container container-sm">
-        <div class="row mt-5">
-            <div class="col-12 mt-5 mb-5 text-center">
+    <div class="container">
+        <div class="row mt-3 g-3">
+            <div class="col-12 my-3 text-center">
                 <h2>Appointment Booking / 預約系統</h2>
             </div>
             <form class="col-12 col-xs-12">
-                <div class="form-group mt-3 step step1" next="step2">
-                  <label class="mb-2" for="location">Choose Location / 選擇地點 *</label>
+                <div class="form-group step step1" next="step2">
+                  <label class="lead mb-2" for="location">Choose Location / 選擇地點 *</label>
                   <select class="form-control-lg w-100 custom-select" id="location">
                     <option disabled selected>Demo clinic Orchard</option>
                     <option value="1">One</option>
@@ -27,7 +28,7 @@
                   </select>
                 </div>
                 <div class="form-group mt-3 step step2" hidden next="step3">
-                    <label class="mb-2" for="location">Choose medical service / 選擇醫療服務 *</label>
+                    <label class="lead mb-2" for="location">Choose medical service / 選擇醫療服務 *</label>
                     <select class="form-control-lg w-100 custom-select" id="location">
                       <option disabled selected>Preferred service / 請選擇醫療服務</option>
                       <option value="1">光療護膚</option>
@@ -37,18 +38,18 @@
                     </select>
                 </div>
                 <div class="form-group mt-3 step step3" hidden next="step4">
-                    <label class="mb-2" for="doctor">Choose provider / 選擇醫師 *</label>
+                    <label class="lead mb-2" for="doctor">Choose provider / 選擇醫師 *</label>
                     <select class="form-control-lg w-100 custom-select" id="doctor">
                       <option disabled selected>Preferred service / 請選擇醫師</option>
                       <option value="1">李聖潔醫師</option>
                     </select>
                 </div>
                 <div datetimepicker="true" class="form-group mt-3 step step4" hidden next="step5">
-                  <label class="mb-2" for="datetime">Choose date and time / 選擇日期與時間 *</label>
+                  <label class="lead mb-2" for="datetime">Choose date and time / 選擇日期與時間 *</label>
                   <input class="form-control-lg w-100" id="datetime" placeholder="DD/MM/YYYY HH:MM">
                 </div>
                 <div class="form-group mt-3 step step5" hidden next="step6">
-                    <label class="mb-2" for="visited">Have you visited clinic before / 是否有來過診所看診 *</label>
+                    <label class="lead mb-2" for="visited">Have you visited clinic before / 是否有來過診所看診 *</label>
                     <select class="form-control-lg w-100 custom-select" id="visited">
                       <option disabled selected>Select yes or no / 請回答是或否</option>
                       <option>yes</option>
@@ -57,7 +58,7 @@
                 </div>
                 <div datepicker="true" class="form-row mt-3 step step6 finalstep" hidden>
                     <div class="form-group step p-1">
-                        <label class="mb-2" for="nationalid">Please key in your NRIC & DOB for us to verify your information / 請輸入National ID和DOB供系統驗證確認 *</label>
+                        <label class="lead mb-2" for="nationalid">Please key in your NRIC & DOB for us to verify your information / 請輸入National ID和DOB供系統驗證確認 *</label>
                         <input type="text" class="form-control-lg w-100" id="nationalid" placeholder="Key in National ID">
                     </div>
                     <div class="form-group step p-1">
@@ -67,7 +68,7 @@
                       <input class="form-control-lg w-100" id="email" placeholder="Email Address">
                   </div>
                 </div>
-                <div class="col-12 mt-5">
+                <div class="col-12 mt-4">
                     <button type="button" class="btn btn-danger btn-lg w-100 disabled submitBtn" data-bs-toggle="modal" data-bs-target="#sorryModal">確認</button>
                 </div>
             </form>
@@ -88,5 +89,10 @@
           </div>
         
     </div>
+
+    <script src="../resource/js/jquery.js"></script>
+    <script src="../resource/js/flatpickr.js"></script>
+    <script src="../resource/js/appointment_custom.js"></script>
+
 </body>
 </html>
