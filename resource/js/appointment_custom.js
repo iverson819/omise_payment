@@ -1,8 +1,44 @@
 var appointment = {
 
+    apiUrl : "https://care-api-staging.vaultdragon.com/",
+    clinicUrl : "clinic?appid=NIKSPWA",
+    doctorsUrl : "provider/doctor/?appid=NIKSPWA", 
+
     init : function() {
+        this.fetchAPI(this.apiUrl + this.clinicUrl, $("#location"), this.updateClinicOption);
+        this.fetchAPI(this.apiUrl + this.doctorsUrl, $("#doctor"), this.updateDoctorOption);
         $(document).on("change", ".step", this.showNextStep);
         $(document).on('change', '.step', this.enableSumbit);
+    },
+
+    fetchAPI : function(url, selector, updateOption) {
+        $.ajax({
+            url: url,
+            type: 'GET',
+            contentType : "application/json",
+            success: function (response) {
+                console.log(response);
+                if(response && response.data) {
+                    response.data.forEach(each => {
+                        let child = $("<option>");
+                        updateOption(child, each, selector);
+                        selector.append(child)
+                    });
+                } else {
+                    console.log("there is no response coming");
+                }
+            }
+        });
+    }, 
+
+    updateDoctorOption : function(child, each) {
+        child.val(each._id);
+        child.text(each.name);
+    },
+
+    updateClinicOption : function(child, each) {
+        child.val(each.clinicCode);
+        child.text(each.name);
     },
 
     showNextStep : function() {
