@@ -7,9 +7,15 @@ var appointment = {
     init : function() {
         this.fetchAPI(this.apiUrl + this.clinicUrl, $("#location"), this.updateClinicOption);
         this.fetchAPI(this.apiUrl + this.doctorsUrl, $("#doctor"), this.updateDoctorOption);
+        this.hideAllForm();
         $(document).on("change", ".step", this.showNextStep);
         $(document).on('change', '.step', this.enableSumbit);
     },
+
+    hideAllForm : function() {
+        $('.form-group').hide();
+        $('.submitBtn').hide();
+    }, 
 
     fetchAPI : function(url, selector, updateOption) {
         $.ajax({
@@ -17,18 +23,24 @@ var appointment = {
             type: 'GET',
             contentType : "application/json",
             success: function (response) {
-                console.log(response);
                 if(response && response.data) {
                     response.data.forEach(each => {
                         let child = $("<option>");
                         updateOption(child, each, selector);
                         selector.append(child)
                     });
+                    appointment.showFirstStep();
                 } else {
                     console.log("there is no response coming");
                 }
             }
         });
+    },
+    
+    showFirstStep : function() {
+        if($('.step1').is(":hidden")) {$('.step1').fadeIn();}
+        if($('.submitBtn').is(":hidden")) {$('.submitBtn').fadeIn();}
+        if($('.loader-wrapper').is(":visible")) {$('.loader-wrapper').hide()}
     }, 
 
     updateDoctorOption : function(child, each) {
@@ -47,10 +59,13 @@ var appointment = {
             return;
         } else {
             let next = $(this).attr('next');
-            $('.' + next).prop('hidden', false);
+            $('.' + next).fadeIn('slow');;
             
             if($('.' + next).hasClass('finalstep')) {
-                $('#email').prop('hidden', val === 'yes');
+                $('.' + next + ' .form-group').fadeIn('slow');
+                if(val === 'yes') {
+                    $('#email').parent().fadeOut('slow');
+                } 
                 $('#email').prop('disabled', val === 'yes');
             }
 
