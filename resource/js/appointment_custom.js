@@ -59,14 +59,24 @@ var appointment = {
             return;
         } else {
             let next = $(this).attr('next');
-            $('.' + next).fadeIn('slow');;
-            
             if($('.' + next).hasClass('finalstep')) {
-                $('.' + next + ' .form-group').fadeIn('slow');
                 if(val === 'yes') {
-                    $('#email').parent().fadeOut('slow');
-                } 
+                    $('#email').parent().addClass('withoutEmail');
+                }  else {
+                    $('#email').parent().removeClass('withoutEmail');
+                }
+
+                $('.' + next + ' .form-group').each(function(){
+                    if(!$(this).hasClass('withoutEmail')) {
+                        $(this).fadeIn('slow');
+                    } else {
+                        $(this).fadeOut('slow');
+                    }
+                })
+                
                 $('#email').prop('disabled', val === 'yes');
+            } else {
+                $('.' + next).fadeIn('slow');
             }
 
             // time picker

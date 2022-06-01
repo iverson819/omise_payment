@@ -15,49 +15,49 @@
     <div class="container">
         <div class="row mt-3 g-3">
             <div class="col-12 my-3 text-center">
-                <h2>Appointment Booking / 預約系統</h2>
+                <h2>Appointment Booking</h2>
             </div>
             <form class="col-12 col-xs-12">
                 <div class="text-center loader-wrapper">
                     <img class="ajax-loader" src="../images/loader.svg" alt="Loading..." />
                 </div>
                 <div class="form-group step step1" next="step2">
-                  <label class="lead mb-2" for="location">Choose Location / 選擇地點 *</label>
+                  <label class="lead mb-2" for="location">Choose Location*</label>
                   <select class="form-control-lg w-100 custom-select" id="location">
                     <option disabled selected class="">Demo clinic Orchard</option>
                   </select>
                 </div>
                 <div class="form-group mt-3 step step2" next="step3">
-                    <label class="lead mb-2" for="location">Choose medical service / 選擇醫療服務 *</label>
+                    <label class="lead mb-2" for="location">Choose medical service*</label>
                     <select class="form-control-lg w-100 custom-select" id="location">
-                      <option disabled selected>Preferred service / 請選擇醫療服務</option>
-                      <option value="1">光療護膚</option>
-                      <option value="2">複合抽脂</option>
-                      <option value="3">皮秒雷射</option>
-                      <option value="4">波尿酸注射</option>
+                      <option disabled selected>Preferred service</option>
+                      <option value="1">Phototherapy skin care</option>
+                      <option value="2">Compound Liposuction</option>
+                      <option value="3">Picosecond laser</option>
+                      <option value="4">Hyaluronic acid injection</option>
                     </select>
                 </div>
                 <div class="form-group mt-3 step step3" next="step4">
-                    <label class="lead mb-2" for="doctor">Choose provider / 選擇醫師 *</label>
+                    <label class="lead mb-2" for="doctor">Choose provider*</label>
                     <select class="form-control-lg w-100 custom-select" id="doctor">
-                      <option disabled selected>Preferred service / 請選擇醫師</option>
+                      <option disabled selected>Preferred service</option>
                     </select>
                 </div>
                 <div datetimepicker="true" class="form-group mt-3 step step4" next="step5">
-                  <label class="lead mb-2" for="datetime">Choose date and time / 選擇日期與時間 *</label>
+                  <label class="lead mb-2" for="datetime">Choose date and time*</label>
                   <input class="form-control-lg w-100 date-select" id="datetime" placeholder="DD/MM/YYYY HH:MM">
                 </div>
                 <div class="form-group mt-3 step step5" next="step6">
-                    <label class="lead mb-2" for="visited">Have you visited clinic before / 是否有來過診所看診 *</label>
+                    <label class="lead mb-2" for="visited">Have you visited clinic before*</label>
                     <select class="form-control-lg w-100 custom-select" id="visited">
-                      <option disabled selected>Select yes or no / 請回答是或否</option>
+                      <option disabled selected>Select yes or no</option>
                       <option>yes</option>
                       <option>no</option>
                     </select>
                 </div>
                 <div datepicker="true" class="form-row mt-3 step step6 finalstep">
                     <div class="form-group step p-1">
-                        <label class="lead mb-2" for="nationalid">Please key in your NRIC & DOB for us to verify your information / 請輸入National ID和DOB供系統驗證確認 *</label>
+                        <label class="lead mb-2" for="nationalid">Please key in your National ID & DOB for us to verify your information*</label>
                         <input type="text" class="form-control-lg w-100" id="nationalid" placeholder="Key in National ID">
                     </div>
                     <div class="form-group step p-1">
@@ -65,7 +65,7 @@
                     </div>
                     <div class="form-group step p-1">
                       <input class="form-control-lg w-100" id="email" placeholder="Email Address">
-                  </div>
+                    </div>
                 </div>
                 <div class="col-12 mt-4">
                     <button type="button" class="btn btn-danger btn-lg w-100 disabled submitBtn" data-bs-toggle="modal" data-bs-target="#sorryModal">確認</button>
